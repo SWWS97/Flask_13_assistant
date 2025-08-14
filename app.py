@@ -9,7 +9,7 @@ app.secret_key = "ssd232929d9sds9293sd9" # 직접 작성하지는 않고 난수 
 
 @app.route("/") #사용자로부터 받아온 URL에 해당하는 함수를 매칭해주기 위해서 사용됩니다.
 def index():
-    return render_template("index.html", name="지수")
+    return render_template("index.html", name="파머")
 
 @app.route('/login')
 def login():
