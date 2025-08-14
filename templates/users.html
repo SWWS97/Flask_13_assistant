@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title> 
+    <!-- 사용자 목록 -->
+
+    {% for user in users %}
+        <section style="margin-bottom: 14px;">
+        <h2>{{ user.name }} {{ user.age }}세</h2>
+        
+        {% if user.age >= 19 %}
+            <p> 상태 : 성인 </p>
+        {% else %}
+            <p> 상태 : 미성년자 </p>
+        {% endif %}
+
+        <h3>스킬</h3>
+        <Ul>
+            {% for s in user.skills %}
+                <li>{{ s }}</li>
+            {% else %}
+                <li>등록된 스킬이 없습니다.</li>
+            {% endfor %}
+        </Ul>
+        </section>
+    {% endfor %}
+</head>
+<body>
+    
+</body>
+</html>
